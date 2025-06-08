@@ -1,17 +1,14 @@
+import sys
+
 def analyze_text(file_path):
     try:
         with open(file_path, 'r') as file:
             text = file.read()
         
-        # Count words
         words = text.split()
         word_count = len(words)
-        
-        # Count characters
         char_count = len(text)
         char_count_no_spaces = len(text.replace(" ", ""))
-        
-        # Count sentences (basic: split by '.', '!', or '?')
         sentences = [s for s in text.split('.') if s.strip()]
         sentence_count = len(sentences)
         
@@ -27,5 +24,15 @@ def analyze_text(file_path):
         return {"error": str(e)}
 
 if __name__ == "__main__":
-    result = analyze_text("sample.txt")
-    print(result)
+    if len(sys.argv) != 2:
+        print("Usage: python3 analyzer.py <file_path>")
+        sys.exit(1)
+    file_path = sys.argv[1]
+    result = analyze_text(file_path)
+    if "error" in result:
+        print(f"Error: {result['error']}")
+    else:
+        print(f"Word Count: {result['word_count']}")
+        print(f"Character Count (with spaces): {result['char_count']}")
+        print(f"Character Count (no spaces): {result['char_count_no_spaces']}")
+        print(f"Sentence Count: {result['sentence_count']}")
