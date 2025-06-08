@@ -16,7 +16,7 @@ This is a simple Python-based text analyzer that counts words, characters, and s
 
 1.Clone the repository:
 
- git clone https://github.com/ankumpetvimala/Elevate-Labs-Git.git
+     git clone https://github.com/ankumpetvimala/Elevate-Labs-Git.git
 
- cd text-analyzer
+     cd text-analyzer
 
