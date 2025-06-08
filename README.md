@@ -9,14 +9,12 @@ This is a simple Python-based text analyzer that counts words, characters, and s
 - Counts total characters (with/without spaces).
   
 - Counts total sentences.
-  
-- Command-line interface for specifying input file.
+
   
 ## Setup Instructions
 
-1.Clone the repository:
+(To be updated after implementation)
 
-     git clone https://github.com/ankumpetvimala/Elevate-Labs-Git.git
+## Project Structure
 
-     cd text-analyzer
-
+(To be updated after implementation)
